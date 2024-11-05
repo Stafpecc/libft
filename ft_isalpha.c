@@ -6,15 +6,13 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:31:35 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/04 20:08:10 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/05 13:12:46 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
-	if ((c >= 67 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

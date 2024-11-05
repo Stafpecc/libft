@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 19:48:54 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/04 20:09:01 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/05 13:08:11 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha == 1 && ft_isdigit == 1)
-		return (1);
-	return (0);
+	return (ft_isalpha(c) == 1 && ft_isdigit(c) == 1);
 }
