@@ -1,5 +1,5 @@
-CFILES	= ft_isalpha.c \
-	ft_isdigit.c \
+CFILES = ft_isdigit.c \
+	ft_isalpha.c \
 	ft_isalnum.c \
 	ft_isascii.c \
 	ft_isprint.c \
@@ -29,8 +29,13 @@ RM = rm -f
 
 OBJS = $(CFILES:.c=.o)
 
-all: $(OBJS)
-	$(CC) $(CFLAGS) -o $(CFILES)
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+all: $(NAME)
+
+$(NAME) : $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
