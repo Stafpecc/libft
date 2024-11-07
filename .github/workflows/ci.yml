@@ -27,11 +27,11 @@ jobs:
 
     - name: Build libft
       run: |
-        docker run --rm -v ${{ github.workspace }}:/Rank_0/libft libft-image make -C libft
+        docker run --rm -v ${{ github.workspace }}:/libft libft-image make -C libft
 
     - name: Run Tests
       run: |
-        docker run --rm -v ${{ github.workspace }}:/Rank_0/libft libft-image g++ -Wall -Wextra -Werror -I libft libft/libft.a tests/*.cpp -o tests/test_libft
-        docker run --rm -v ${{ github.workspace }}:/Rank_0/libft libft-image ./tests/test_libft
+        docker run --rm -v ${{ github.workspace }}:/libft libft-image g++ -Wall -Wextra -Werror -I libft libft/libft.a tests/*.cpp -o tests/test_libft
+        docker run --rm -v ${{ github.workspace }}:/libft libft-image ./tests/test_libft
 
 
