@@ -31,7 +31,7 @@ jobs:
 
     - name: Run Tests
       run: |
-        docker run --rm -v ${{ github.workspace }}:/libft libft-image g++ -Wall -Wextra -Werror -I libft libft/libft.a tests/*.cpp -o tests/test_libft
-        docker run --rm -v ${{ github.workspace }}:/libft libft-image ./tests/test_libft
+        docker run --rm -v libft-image g++ -Wall -Wextra -Werror -I libft libft/libft.a tests/*.cpp -o tests/test_libft
+        docker run --rm -v libft-image ./tests/test_libft
 
 
