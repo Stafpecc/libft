@@ -27,7 +27,7 @@ jobs:
 
     - name: Build libft
       run: |
-        docker run --rm -v ${{ github.workspace }}:/libft libft-image make -C libft
+        docker run --rm -v libft-image make -C libft
 
     - name: Run Tests
       run: |
