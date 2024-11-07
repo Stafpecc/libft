@@ -29,12 +29,12 @@ RM = rm -f
 
 OBJS = $(CFILES:.c=.o)
 
-%.o : %.c
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
 clean:
