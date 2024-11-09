@@ -6,11 +6,12 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:42:49 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/09 13:12:35 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/09 14:50:38 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -22,14 +23,16 @@ void	*ft_memset(void *s, int c, size_t n)
 	return s;
 }
 
+/*
 #include <stdio.h>
 
-int main( void ) {
+int main(void) {
    char buffer[] = "Shhhhht ! Sorry, I had no idea";
-   printf( "Before                 : %s\n", buffer );
-   memset( buffer, '*', 7 );
-   printf( "After origin function  :  %s\n", buffer );
+   printf("Before                 : %s\n", buffer);
+   memset(buffer, '*', 7);
+   printf("After origin function  : %s\n", buffer);
    char ft_buffer[] = "Shhhhht ! Sorry, I had no idea";
-   ft_memset( buffer, '*', 7 );
-   printf( "After 42 function      :  %s\n", buffer );
+   ft_memset(buffer, '*', 7);
+   printf("After 42 function      : %s\n", buffer);
 }
+*/
