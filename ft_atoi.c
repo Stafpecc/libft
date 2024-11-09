@@ -6,29 +6,45 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:54:30 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/09 14:39:11 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/09 16:46:59 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_passwhitespace(int i, const char *str)
+{
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' ||
+				str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+		i++;
+}
 
 int	ft_atoi(const char *nptr)
 {   
 		int	i;
-		int	signe;
+		int	sign;
 		int	result;
-
 		result = 0;
-		signe = 1;
-		i = 0;
-		if (nptr[i++] == '-')
-			signe *= -1;
-			
-		while (nptr[i] >= '0' && nptr[i] <= '9')
+		sign = 1;
+		if (!nptr)
+			return 0;
+		i = ft_passwhitespace(i, *nptr);
+		if (nptr[i] == '-')
+		{
+			sign *= -1;
+			i++;
+		}	
+		while (ft_isdigit(nptr[i]))
 		{
 				result = result * 10 + (nptr[i] - '0');
 				i++;
 		}
-		result *= signe;
-		return (result);
+		result *= sign;
+		if (result > 2147483646)
+			return -1;
+		else if (result < -2147483648)
+			return 0;
+		return ((int)result);
 }
 /*
 #include <stdlib.h>

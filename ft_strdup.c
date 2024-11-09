@@ -6,9 +6,11 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:54:26 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/09 15:54:53 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/09 16:47:06 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 char	*ft_strdup(char *src)
 {
@@ -26,8 +28,7 @@ char	*ft_strdup(char *src)
 /*
 #include <stdio.h>
 
-int	main(void)
-{
+int	main(void) {
 	char	src[7] = "bonjour";
 	char	*dest = ft_strdup(src);
 

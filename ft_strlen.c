@@ -6,14 +6,14 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:07:34 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/06 12:22:02 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/09 16:47:07 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	count;
 

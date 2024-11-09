@@ -6,19 +6,22 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 12:22:27 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/09 14:26:31 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/09 16:47:00 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <strings.h>
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {
 	size_t count;
 
+    if (!s)
+        return 0;
 	count = -1;
 	while (++count < n)
-		((char*)s)[count] = 0;
+		((char*)s)[count + 1] = 0;
 }
 
 /*

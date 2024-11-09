@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:45:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/09 15:47:54 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/09 16:47:05 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	count;
 
+	if (!dest || !src)
+		return 0;
 	count = -1;
 	while (++count < n)
 		((char*)dest)[count] = ((char*)src)[count];
 	((char*)dest)[count + 1] = '\0';
 	return dest;
 }
-
+/*
 #include <stdio.h>
 
 int main(void) {
@@ -36,4 +38,4 @@ int main(void) {
    char ft_dest[] = "Quiz";
    ft_memcpy(ft_dest, ft_src, 5);
    printf("\nAfter 42 function : \n%s\n", ft_dest);
-}
+*/

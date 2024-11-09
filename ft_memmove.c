@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:42:46 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/09 15:48:29 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/09 16:47:05 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t count;
 
+	if (!dest || !src)
+		return 0;
 	count = -1;
 	while (++count < n) 
 		((char*)dest)[count] = ((char*)src)[count];
 	((char*)dest)[count + 1] = '\0'; 
 	return dest;
 }
-
+/*
 #include <stdio.h>
 
 int main(void) {
@@ -37,3 +39,4 @@ int main(void) {
    ft_memmove(ft_dest, ft_src, 5);
    printf("\nAfter 42 function : \n%s\n", ft_dest);
 }
+*/
