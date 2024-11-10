@@ -27,6 +27,7 @@ jobs:
   
   clean:
       runs-on: ubuntu-latest
+      needs: libft-test
       
       steps:
         - name: Clean
