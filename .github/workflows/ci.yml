@@ -24,6 +24,10 @@ jobs:
 
       - name: Run tests
         run: TERM=xterm make
-        
-      - name: Clean
-        run: make ffclean
+  
+  clean:
+      runs-on: ubuntu-latest
+      
+      steps:
+        - name: Clean
+          run: make ffclean
