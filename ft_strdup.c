@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:54:26 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 19:11:03 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/10 19:59:09 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strdup(const char *src)
 
 	i = -1;
 	dest = malloc(sizeof(char) * (ft_strlen(src) + 1));
+	if (dest == NULL)
+		return NULL;
 	while (src[++i])
 		dest[i] = src[i];
 	dest[i] = '\0';
