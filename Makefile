@@ -19,14 +19,15 @@ CFILES = ft_isdigit.c \
 	ft_memcmp.c \
 	ft_strnstr.c \
 	ft_atoi.c \
-	ft_calloc.c \
-	ft_strdup.c
+	ft_strdup.c \
+	ft_calloc.c
+	
 
 NAME = libft.a
-
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
+EXEC = a.out
 
 OBJS = $(CFILES:.c=.o)
 
@@ -39,11 +40,14 @@ $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(EXEC)
 
 fclean:
 	$(RM) $(NAME)
 
+ffclean:
+	$(RM) $(NAME) $(OBJS) $(EXEC)
+
 re : fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean ffclean re
