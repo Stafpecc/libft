@@ -23,6 +23,12 @@ jobs:
           cd libft
           make
 
+      - name: Run tests test
+        run: |
+          cd ../ tests/Part1_functions/ft_atoi
+          cc -o test *.c -L../../libft -lft
+          ./test
+ 
       - name: Run tests Part1
         run: |
           cd ../tests/Part1_functions
