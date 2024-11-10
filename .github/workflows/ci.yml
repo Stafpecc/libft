@@ -18,11 +18,7 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get install -y make gcc
 
-      - name: Compile libft
-        run: |
-          ../../../libft
-          make
-
       - name: Run tests
         run: |
-          make -C .. ../../libft
+          cd ../libftTester
+          make 
