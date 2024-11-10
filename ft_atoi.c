@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:54:30 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 14:29:27 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/10 14:52:17 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 int	ft_pass(int i, const char *str, int *s)
 {
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' ||
-			str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -29,7 +29,7 @@ int	ft_pass(int i, const char *str, int *s)
 }
 
 int	ft_atoi(const char *nptr)
-{   
+{
 	int	i;
 	int	sign;
 	int	result;
@@ -42,12 +42,12 @@ int	ft_atoi(const char *nptr)
 	i = ft_pass(i, nptr, &sign);
 	while (ft_isdigit(nptr[i]))
 	{
-		if (result>(2147483647-(nptr[i]-'0'))/10)
+		if (result > (2147483647 - (nptr[i] - '0')) / 10)
 		{
-			if (sign == -1 && result > (2147483648-(nptr[i]-'0'))/10)
-				return 0;
+			if (sign == -1 && result > (2147483648 - (nptr[i] - '0')) / 10)
+				return (0);
 			else if (sign == 1)
-				return -1;
+				return (-1);
 		}
 		result = result * 10 + (nptr[i] - '0');
 		i++;
