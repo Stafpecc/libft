@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 12:22:27 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 12:27:18 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/10 12:29:30 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void ft_bzero(void *s, size_t n)
 	size_t count;
 
 	if (!s)
-		return NULL;
+		return ;
 	count = -1;
 	while (++count < n)
 		((char*)s)[count] = 0;
