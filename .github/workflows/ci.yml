@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  backend-test:
+  libft-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
