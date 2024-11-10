@@ -20,7 +20,7 @@ jobs:
 
       - name: Compile libft
         run: |
-          cd libft
+          ../../../libft
           make
 
       - name: Run tests
