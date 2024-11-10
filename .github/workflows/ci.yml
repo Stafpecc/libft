@@ -10,7 +10,10 @@ on:
 
 jobs:
   libft-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest.
+    defaults:
+      run:
+        working-directory: libft
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -20,6 +23,5 @@ jobs:
 
       - name: Run tests
         run: |
-          working-directory: libft
           cd libftTester
           make 
