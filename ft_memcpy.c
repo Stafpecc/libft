@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:45:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 15:01:01 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/10 16:08:17 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*
+#include <stdio.h>
+
 int main(void) {
-	char src[] = "Geeks";
-	char dest[] = "Quiz";
+	char src[] = "B";
+	char dest[] = "0";
 	printf("Before : %s\n", dest);
-	memcpy(dest, src, 5);
+	memcpy(dest, src, 10);
 	printf("\nAfter origin function : \n%s", dest);
 
-	char ft_src[] = "Geeks";
-	char ft_dest[] = "Quiz";
-	ft_memcpy(ft_dest, ft_src, 5);
+	char ft_src[] = "B";
+	char ft_dest[] = "0";
+	ft_memcpy(ft_dest, ft_src, 10);
 	printf("\nAfter 42 function : \n%s\n", ft_dest);
 
 	return 0;
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:42:46 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 15:12:27 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/10 16:08:16 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 #include <stdio.h>
 
 int main(void) {
-	char src[] = "Geeks";
-	char dest[] = "Quiz";
+	char src[] = "Hellooo";
+	char dest[] = "Coucou";
 	printf("Before : %s\n", dest);
-	memmove(dest, src, 5);
+	memmove(dest, src, 7);
 	printf("After origin function : \n%s", dest);
 
-	char ft_src[] = "Geeks";
+	char ft_src[] = "Hellooo";
 	char ft_dest[] = "Quiz";
 	ft_memmove(ft_dest, ft_src, 5);
 	printf("\nAfter 42 function : \n%s\n", ft_dest);
