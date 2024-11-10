@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 15:36:02 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 18:24:18 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/10 19:29:09 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void *ft_memchr(const void *s, int c, size_t n)
 	while (++i < n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return (&((void *)s)[i]);
+			return ((void *)&((unsigned char *)s)[i]);
 	}
 	return (NULL);
 }
