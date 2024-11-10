@@ -23,23 +23,12 @@ CFILES = ft_isdigit.c \
 	ft_strdup.c
 
 NAME = libft.a
-TESTS_PATH = libftTester/tests
-LIBFT_PATH = ../libft
-
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-UTILS			= $(addprefix utils/, sigsegv.cpp color.cpp check.cpp leaks.cpp)
-
 OBJS = $(CFILES:.c=.o)
-
-$(CFILES): %: mandatory_start
-	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && ./a.out && rm -f a.out
-
-$(VSOPEN): vs%:
-	@code $(TESTS_PATH)ft_$*_test.cpp
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
