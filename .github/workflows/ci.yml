@@ -20,5 +20,6 @@ jobs:
 
       - name: Run tests
         run: |
-          cd ../libftTester
+          working-directory: libft
+          cd libftTester
           make 
