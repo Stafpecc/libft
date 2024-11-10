@@ -23,6 +23,18 @@ jobs:
           cd libft
           make
 
+      - name: Run tests Part1
+        run: |
+          cd ../tests/Part1_functions
+          cc -o test_part1 *.c -L../../libft -lft
+          ./test_part1
+
+      - name: Run tests Part2
+        run: |
+          cd ../tests/Part2_functions
+          cc -o test_part2 *.c -L../../libft -lft
+          ./test_part2
+
       - name: Run tests Additional
         run: |
           cd ../tests/Additional_functions
@@ -35,14 +47,3 @@ jobs:
           cc -o test_bonus *.c -L../../libft -lft
           ./test_bonus
 
-      - name: Run tests Part1
-        run: |
-          cd ../tests/Part1_functions
-          cc -o test_part1 *.c -L../../libft -lft
-          ./test_part1
-
-      - name: Run tests Part2
-        run: |
-          cd ../tests/Part2_functions
-          cc -o test_part2 *.c -L../../libft -lft
-          ./test_part2
