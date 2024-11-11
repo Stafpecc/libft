@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:18:07 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/11 16:38:19 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/11 16:40:18 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void *calloc(size_t elementCount, size_t elementSize)
 	ft_bzero(elementSize, elementCount);
 }
 
-#include <stdio.h>          
+/* #include <stdio.h>          
 #include <stdlib.h>
 #include <assert.h>
 
@@ -39,4 +39,4 @@ int main() {
     printf("\n");
     free(pointer);
     return 0;
-}
+} */
