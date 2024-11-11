@@ -24,22 +24,3 @@ jobs:
 
       - name: Run tests
         run: TERM=xterm make
-        
-      - name: Clean
-        run: make ffclean
-      
-  libft-bonus:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: libftTester
-
-    needs: [libft-test]
-
-    steps:
-
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Test bonus
-        run:  
