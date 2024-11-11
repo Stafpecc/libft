@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:54:26 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/11 16:05:11 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/11 16:07:34 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strdup(const char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void) {
@@ -38,3 +38,4 @@ int	main(void) {
 	free(dest);
 	return (0);
 }
+*/
