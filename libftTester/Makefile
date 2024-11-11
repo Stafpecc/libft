@@ -6,7 +6,7 @@ TESTS_PATH		= tests/
 MANDATORY		= memset bzero  memmove memchr atoi memcpy isalpha isdigit isalnum isprint isascii \
 				strdup strlen 
 
-				# toupper tolower strchr strrchr memcmp strncmp strlcpy strlcat strnstr \
+# toupper tolower strchr strrchr memcmp strncmp strlcpy strlcat strnstr \
 				calloc substr strjoin strtrim split itoa strmapi putchar_fd putstr_fd \
 				putendl_fd putnbr_fd striteri
 
@@ -23,8 +23,8 @@ endif
 $(MANDATORY): %: mandatory_start
 	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
 
-$(BONUS): %: bonus_start
-	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
+#$(BONUS): %: bonus_start
+#	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
 
 $(VSOPEN): vs%:
 	@code $(TESTS_PATH)ft_$*_test.cpp
@@ -34,10 +34,10 @@ mandatory_start: update message
 	make -C $(LIBFT_PATH)
 	@tput setaf 4 && echo [Mandatory]
 
-bonus_start: update message
-	@tput setaf 6
-	make bonus -C $(LIBFT_PATH)
-	@tput setaf 5 && echo [Bonus]
+# bonus_start: update message
+#	@tput setaf 6
+#	make bonus -C $(LIBFT_PATH)
+#	@tput setaf 5 && echo [Bonus]
 
 update:
 	@git pull
@@ -49,7 +49,7 @@ checkmakefile:
 	@ls $(LIBFT_PATH) | grep Makefile > /dev/null 2>&1 || (tput setaf 1 && echo Makefile not found. && exit 1)
 
 m: $(MANDATORY)
-b: $(BONUS)
+#b: $(BONUS)
 a: m b 
 
 clean:
