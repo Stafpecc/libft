@@ -17,7 +17,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n);
 void *ft_memmove(void *dest, const void *src, size_t n);
 char *ft_strchrnul(const char *s, int c);
 char	*ft_strdup(const char *src);
-void *calloc(size_t elementCount, size_t elementSize);
+void *ft_calloc(size_t elementCount, size_t elementSize);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 
 #endif
