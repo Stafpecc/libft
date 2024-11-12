@@ -4,11 +4,11 @@ PARENT_DIR		= $(shell dirname $(shell pwd))
 LIBFT_PATH		= $(PARENT_DIR)
 TESTS_PATH		= tests/
 MANDATORY		= memset bzero  memmove memchr atoi memcpy isalpha isdigit isalnum isprint isascii \
-				strdup strlen strlcat
+				strdup strlen strlcat calloc
 
 # toupper tolower strchr strrchr memcmp strncmp strlcpy strnstr \
 				substr strjoin strtrim split itoa strmapi putchar_fd putstr_fd \
-				putendl_fd putnbr_fd striteri calloc
+				putendl_fd putnbr_fd striter
 
 BONUS			= lstnew lstadd_front lstsize lstlast lstadd_back lstdelone lstclear lstiter lstmap
 VSOPEN			= $(addprefix vs, $(MANDATORY)) $(addprefix vs, $(BONUS))
@@ -20,7 +20,7 @@ ifeq ($(UNAME), Linux)
 	VALGRIND = valgrind -q --leak-check=full
 endif
 
-$(MANDATORY): %: mandatory_start
+$(MANDATORY): %: mandatory_start:with
 	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
 
 #$(BONUS): %: bonus_start
