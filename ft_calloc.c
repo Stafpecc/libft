@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:18:07 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/12 14:14:20 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/12 14:20:46 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void *calloc(size_t elementCount, size_t elementSize)
     if (!ptr)
 		return (ptr);
 	ft_bzero(ptr, product);
+    return (ptr);
 }
 
 /*

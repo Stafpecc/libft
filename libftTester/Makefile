@@ -20,7 +20,7 @@ ifeq ($(UNAME), Linux)
 	VALGRIND = valgrind -q --leak-check=full
 endif
 
-$(MANDATORY): %: mandatory_start:with
+$(MANDATORY): %: mandatory_start
 	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
 
 #$(BONUS): %: bonus_start
