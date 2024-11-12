@@ -6,7 +6,7 @@
 /*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:21:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/12 23:33:53 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/12 23:39:36 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
 char *ft_strchr(const char *str, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
-char *ft_strnchr(const char *str, int c, size_t len);
+char *ft_strrchr(const char *str, int c);
 int ft_tolower(int c);
 int ft_toupper(int c);
 
-#endif
+#endif:while

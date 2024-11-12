@@ -6,21 +6,23 @@
 /*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 23:31:33 by stafpec           #+#    #+#             */
-/*   Updated: 2024/11/12 23:31:55 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/12 23:39:14 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnchr(const char *str, int c, size_t len)
+char *ft_strrchr(const char *str, int c)
 {
-    size_t i = 0;
+    const char *last = NULL;
 
-    while (i < len && str[i] != '\0')
+    while (*str)
     {
-        if (str[i] == (char)c)
-            return (char *)(str + i);
-        i++;
+        if (*str == (char)c)
+            last = str;
+        str++;
     }
-    return NULL;
+    if (c == '\0')
+        return (char *)str;
+    return (char *)last;
 }
