@@ -6,7 +6,7 @@
 /*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:47:49 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/12 22:45:05 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/12 22:55:10 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 
 	while (src[++s] != '\0')
 	if (size == 0)
+	{
+		if (dest)
+			dest[0] = '\0';
 		return s;
+	}
 	while (src[++i] != '\0' && i < size - 1)
 		dest[i] = src[i];
 	dest[i] = '\0';
