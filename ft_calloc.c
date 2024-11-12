@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:18:07 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/12 14:22:42 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/12 14:35:27 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void *ft_calloc(size_t elementCount, size_t elementSize)
     size_t  product;
 	
     product = elementCount * elementSize;
-	ptr = malloc(sizeof(void *) * product);
+	ptr = malloc(product);
     if (!ptr)
 		return (ptr);
 	ft_bzero(ptr, product);
