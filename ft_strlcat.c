@@ -3,37 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:55:16 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 16:08:13 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/12 22:43:42 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	c;
 	unsigned int	dstlen;
 	unsigned int	srclen;
+	unsigned int	i;
 
 	dstlen = ft_strlen(dest);
 	srclen = ft_strlen(src);
-	i = 0;
-	c = dstlen;
+
 	if (size <= dstlen)
-		return (srclen + size);
-	while (src[i] && i < size - dstlen - 1)
-	{
-		dest[c] = src[i];
-		c ++;
-		i ++;
-	}
-	dest[c] = 0;
+		return (size + srclen);
+	i = -1;
+	while (src[++i] != '\0' && (dstlen + i) < (size - 1))
+		dest[dstlen + i] = src[i];
+	dest[dstlen + i] = '\0';
 	return (dstlen + srclen);
 }
+
 /*
 #include <stdio.h>
 
