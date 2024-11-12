@@ -6,7 +6,7 @@
 /*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:21:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/12 23:20:09 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/12 23:25:48 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
 char *ft_strchr(const char *str, int c);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
