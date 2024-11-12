@@ -6,7 +6,7 @@
 /*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:21:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/12 23:39:36 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/12 23:40:34 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,4 @@ char *ft_strrchr(const char *str, int c);
 int ft_tolower(int c);
 int ft_toupper(int c);
 
-#endif:while
+#endif
