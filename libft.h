@@ -6,7 +6,7 @@
 /*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:21:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/12 23:25:48 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/12 23:33:53 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void ft_bzero(void *s, size_t n);
 void *ft_memset(void *s, int c, size_t n);
 void *ft_memcpy(void *dest, const void *src, size_t n);
 void *ft_memmove(void *dest, const void *src, size_t n);
-char *ft_strchrnul(const char *s, int c);
 char	*ft_strdup(const char *src);
 void *ft_calloc(size_t elementCount, size_t elementSize);
 unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
@@ -35,5 +34,9 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
 unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
 char *ft_strchr(const char *str, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
+char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char *ft_strnchr(const char *str, int c, size_t len);
+int ft_tolower(int c);
+int ft_toupper(int c);
 
 #endif

@@ -4,10 +4,10 @@ PARENT_DIR		= $(shell dirname $(shell pwd))
 LIBFT_PATH		= $(PARENT_DIR)
 TESTS_PATH		= tests/
 MANDATORY		= memset bzero  memmove memchr atoi memcpy isalpha isdigit isalnum isprint isascii \
-				strdup strlen strlcat calloc strlcpy strchr memcmp strncmp
+				strdup strlen strlcat calloc strlcpy strchr memcmp strncmp tolower toupper strnstr \
+				strrchr
 
-# toupper tolower strrchr  strnstr \
-				substr strjoin strtrim split itoa strmapi putchar_fd putstr_fd \
+# substr strjoin strtrim split itoa strmapi putchar_fd putstr_fd \
 				putendl_fd putnbr_fd striter
 
 BONUS			= lstnew lstadd_front lstsize lstlast lstadd_back lstdelone lstclear lstiter lstmap
