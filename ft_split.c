@@ -1,14 +1,15 @@
 /* ************************************************************************** */
-/*									      */
-/*							  :::	   ::::::::   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
-/*						      +:+ +:+	      +:+     */
-/*   By: tarini <marvin@42.fr>			    +#+  +:+	   +#+	      */
-/*						  +#+#+#+#+#+	+#+	      */
-/*   Created: 2024/07/17 17:03:43 by tarini	       #+#    #+#	      */
-/*   Updated: 2024/07/18 16:31:58 by tarini           ###   ########.fr       */
-/*									      */
+/*                                                    +:+ +:+         +:+     */
+/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 01:55:30 by stafpec           #+#    #+#             */
+/*   Updated: 2024/11/13 01:59:10 by stafpec          ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
+
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -75,7 +76,7 @@ void	ft_split_end(char *start, char **result, char *str, int i)
 	result[i] = NULL;
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char const *str, char *charset)
 {
 	int		i;
 	char	**result;
