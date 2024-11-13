@@ -38,6 +38,6 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char *ft_strrchr(const char *str, int c);
 int ft_tolower(int c);
 int ft_toupper(int c);
-char	**ft_split(char *str, char *charset);
+char	**ft_split(const char *str, const char *charset);
 
 #endif
