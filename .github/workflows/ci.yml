@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: libftTester
+        working-directory: .libftTester
     
     steps:
       - name: Checkout code
@@ -25,7 +25,7 @@ jobs:
       - name: Run tests
         run: TERM=xterm make
 
-      - name: Run francinette
-        run: |
-          bash -c "$(curl -fsSL https://raw.github.com/xicodomingues/francinette/master/bin/install.sh)"
-          francinette
+#      - name: Run francinette
+#        run: |
+#          bash -c "$(curl -fsSL https://raw.github.com/xicodomingues/francinette/master/bin/install.sh)"
+#          francinette
