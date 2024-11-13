@@ -24,3 +24,8 @@ jobs:
 
       - name: Run tests
         run: TERM=xterm make
+
+      - name: Run francinette
+        run: |
+          bash -c "$(curl -fsSL https://raw.github.com/xicodomingues/francinette/master/bin/install.sh)"
+          francinette
