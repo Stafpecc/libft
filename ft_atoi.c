@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:54:30 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 16:08:22 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/13 15:24:39 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ int	ft_atoi(const char *nptr)
 	int	sign;
 	int	result;
 
-	if (!nptr)
-		return (0);
 	i = 0;
 	sign = 1;
 	result = 0;
@@ -52,6 +50,7 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
+
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -61,8 +60,8 @@ int	main(int ac, char **av) {
     int i = atoi(av[1]);
 	int y = ft_atoi(av[1]);
  
-    printf("with atoi function i = %d\n", i);
-	printf("with 42 atoi function y = %d\n", y);
+    printf("with atoi function       :  %d\n", i);
+	printf("with 42 atoi function    :  %d\n", y);
 	return 0;
 }
 */

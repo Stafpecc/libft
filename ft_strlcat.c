@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:55:16 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/12 22:43:42 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/13 15:22:43 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 
 	dstlen = ft_strlen(dest);
 	srclen = ft_strlen(src);
-
 	if (size <= dstlen)
 		return (size + srclen);
 	i = -1;
@@ -40,5 +39,4 @@ int	main(void) {
 	printf("%s\n", dest);
 	return (0);
 }
-
 */

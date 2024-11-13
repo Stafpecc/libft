@@ -6,20 +6,18 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 15:36:02 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 19:29:09 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/13 15:24:26 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
 
 	i = -1;
-	if (!s)
-		return (NULL);
 	while (++i < n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)

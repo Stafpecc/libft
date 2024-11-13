@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:07:34 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/11 16:13:24 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/13 15:18:21 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	count;
 
-	if (!s)
-		return 0;
-	count = -1;
-	while (s[++count] != '\0');
+	count = 0;
+	while (s[count] != '\0')
+	{
+		count++;
+	}
 	return (count);
 }
 

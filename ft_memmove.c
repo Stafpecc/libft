@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:42:46 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 16:08:16 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/13 15:21:36 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	s = (const char *)src;
 	d = (char *)dest;
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	if (d > s && d < s + n)
 	{

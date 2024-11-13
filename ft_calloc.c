@@ -6,26 +6,26 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:18:07 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/12 14:56:23 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/13 14:39:42 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdint.h>
 
-void *ft_calloc(size_t elementCount, size_t elementSize)
+void	*ft_calloc(size_t elementCount, size_t elementSize)
 {
-    void    *ptr;
-    size_t  product;
+	void	*ptr;
+	size_t	product;
 
-    if (elementCount > SIZE_MAX / elementSize)
-        return (NULL);
-    product = elementCount * elementSize;
+	if (elementCount > SIZE_MAX / elementSize)
+		return (NULL);
+	product = elementCount * elementSize;
 	ptr = malloc(product);
-    if (!ptr)
+	if (!ptr)
 		return (ptr);
 	ft_bzero(ptr, product);
-    return (ptr);
+	return (ptr);
 }
 /*
 #include <stdio.h>          
@@ -33,19 +33,19 @@ void *ft_calloc(size_t elementCount, size_t elementSize)
 #include <assert.h>
 
 int main() {
-    
-    int i;
-    int *pointer = (int *) calloc(10, sizeof(int));
+	
+	int i;
+	int *pointer = (int *) calloc(10, sizeof(int));
 
-    assert(pointer != NULL);
-    for ( i=0; i<10-1; i++ ) {
-        pointer[i] = i;
-    }
-    for (i = 0; i < 10; i++) {
-        printf("%d ", pointer[i]);
-    }
-    printf("\n");
-    free(pointer);
-    return 0;
+	assert(pointer != NULL);
+	for ( i=0; i<10-1; i++ ) {
+		pointer[i] = i;
+	}
+	for (i = 0; i < 10; i++) {
+		printf("%d ", pointer[i]);
+	}
+	printf("\n");
+	free(pointer);
+	return 0;
 }
 */

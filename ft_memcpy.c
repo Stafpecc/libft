@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:45:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 18:38:20 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/13 15:20:30 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	count;
 
-	if (!dest || (!src && n > 0))
+	if (!dest && !src && n > 0)
 		return (NULL);
 	count = 0;
 	while (count < n)
