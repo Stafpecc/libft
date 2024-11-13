@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-char	*copy_substring(char *start, char *end)
+char	*copy_substring(const char *start, const char *end)
 {
 	int		i;
 	int		len;
@@ -34,7 +34,7 @@ char	*copy_substring(char *start, char *end)
 	return (substring);
 }
 
-int	ft_sep(char c, char *charset)
+int	ft_sep(const char c, const char *charset)
 {
 	while (*charset)
 	{
@@ -45,7 +45,7 @@ int	ft_sep(char c, char *charset)
 	return (0);
 }
 
-int	ft_count(char *str, char *charset)
+int	ft_count(const char *str, const char *charset)
 {
 	int	substring;
 	int	counter;
@@ -69,14 +69,14 @@ int	ft_count(char *str, char *charset)
 	return (counter);
 }
 
-void	ft_split_end(char *start, char **result, char *str, int i)
+void	ft_split_end(const char *start, const char **result, const char *str, int i)
 {
 	if (start)
 		result[i++] = copy_substring(start, str);
 	result[i] = NULL;
 }
 
-char	**ft_split(char const *str, char *charset)
+char	**ft_split(char const *str, const char *charset)
 {
 	int		i;
 	char	**result;
