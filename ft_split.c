@@ -14,95 +14,99 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-char	*copy_substring(const char *start, const char *end)
-{
-	int		i;
-	int		len;
-	char	*substring;
+#include <unistd.h>
+#include <stdlib.h>
 
-	i = 0;
-	len = end - start;
-	substring = (char *)malloc((len + 1) * sizeof(char));
-	if (!substring)
-		return (NULL);
-	while (i < len)
-	{
-		substring[i] = start[i];
-		i++;
-	}
-	substring[len] = '\0';
-	return (substring);
+char    *copy_substring(const char *start, const char *end)
+{
+    int     i;
+    int     len;
+    char    *substring;
+
+    i = 0;
+    len = end - start;
+    substring = (char *)malloc((len + 1) * sizeof(char));
+    if (!substring)
+        return (NULL);
+    while (i < len)
+    {
+        substring[i] = start[i];
+        i++;
+    }
+    substring[len] = '\0';
+    return (substring);
 }
 
-int	ft_sep(const char c, const char *charset)
+int ft_sep(char c, const char *charset)
 {
-	while (*charset)
-	{
-		if (c == *charset)
-			return (1);
-		charset++;
-	}
-	return (0);
+    while (*charset)
+    {
+        if (c == *charset)
+            return (1);
+        charset++;
+    }
+    return (0);
 }
 
-int	ft_count(const char *str, const char *charset)
+int ft_count(const char *str, const char *charset)
 {
-	int	substring;
-	int	counter;
+    int substring;
+    int counter;
 
-	substring = 0;
-	counter = 0;
-	while (*str)
-	{
-		if (!ft_sep(*str, charset))
-		{
-			if (!substring)
-			{
-				counter++;
-				substring = 1;
-			}
-		}
-		else
-			substring = 0;
-		str++;
-	}
-	return (counter);
+    substring = 0;
+    counter = 0;
+    while (*str)
+    {
+        if (!ft_sep(*str, charset))
+        {
+            if (!substring)
+            {
+                counter++;
+                substring = 1;
+            }
+        }
+        else
+            substring = 0;
+        str++;
+    }
+    return (counter);
 }
 
-void	ft_split_end(const char *start, const char **result, const char *str, int i)
+void ft_split_end(const char *start, char **result, const char *str, int i)
 {
-	if (start)
-		result[i++] = copy_substring(start, str);
-	result[i] = NULL;
+    if (start)
+        result[i++] = copy_substring(start, str);
+    result[i] = NULL;
 }
 
-char	**ft_split(char const *str, const char *charset)
+char **ft_split(const char *str, const char *charset)
 {
-	int		i;
-	char	**result;
-	char	*start;
+    int     i;
+    char    **result;
+    const char  *start;
 
-	start = NULL;
-	i = 0;
-	result = (char **)malloc(sizeof(char *) * (ft_count(str, charset) + 1));
-	if (!result)
-		return (NULL);
-	while (*str)
-	{
-		if (!ft_sep(*str, charset))
-			if (!start)
-				start = str;
-		if (ft_sep(*str, charset))
-		{
-			if (start)
-				result[i++] = copy_substring(start, str);
-			start = NULL;
-		}
-		str++;
-	}
-	ft_split_end(start, result, str, i);
-	return (result);
+    start = NULL;
+    i = 0;
+    result = (char **)malloc(sizeof(char *) * (ft_count(str, charset) + 1));
+    if (!result)
+        return (NULL);
+    while (*str)
+    {
+        if (!ft_sep(*str, charset))
+            if (!start)
+                start = str;
+        if (ft_sep(*str, charset))
+        {
+            if (start)
+                result[i++] = copy_substring(start, str);
+            start = NULL;
+        }
+        str++;
+    }
+    ft_split_end(start, result, str, i);
+    return (result);
 }
+
 
 /*
 #include <stdio.h>
