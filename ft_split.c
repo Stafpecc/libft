@@ -14,9 +14,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-#include <unistd.h>
-#include <stdlib.h>
-
 char    *copy_substring(const char *start, const char *end)
 {
     int     i;
