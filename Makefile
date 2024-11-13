@@ -21,7 +21,7 @@ CFILES = ft_isdigit.c \
 	ft_atoi.c \
 	ft_strdup.c \
 	ft_calloc.c \
-	ft_split
+	ft_split.c
 	
 
 NAME = libft.a
