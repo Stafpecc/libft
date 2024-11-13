@@ -34,18 +34,12 @@ char    *copy_substring(const char *start, const char *end)
     return (substring);
 }
 
-int ft_sep(char c, const char *charset)
+int ft_sep(char c, char sep)
 {
-    while (*charset)
-    {
-        if (c == *charset)
-            return (1);
-        charset++;
-    }
-    return (0);
+    return (c == sep);
 }
 
-int ft_count(const char *str, const char *charset)
+int ft_count(const char *str, char sep)
 {
     int substring;
     int counter;
@@ -54,7 +48,7 @@ int ft_count(const char *str, const char *charset)
     counter = 0;
     while (*str)
     {
-        if (!ft_sep(*str, charset))
+        if (!ft_sep(*str, sep))
         {
             if (!substring)
             {
@@ -76,7 +70,7 @@ void ft_split_end(const char *start, char **result, const char *str, int i)
     result[i] = NULL;
 }
 
-char **ft_split(const char *str, const char *charset)
+char **ft_split(const char *str, char sep)
 {
     int     i;
     char    **result;
@@ -84,15 +78,15 @@ char **ft_split(const char *str, const char *charset)
 
     start = NULL;
     i = 0;
-    result = (char **)malloc(sizeof(char *) * (ft_count(str, charset) + 1));
+    result = (char **)malloc(sizeof(char *) * (ft_count(str, sep) + 1));
     if (!result)
         return (NULL);
     while (*str)
     {
-        if (!ft_sep(*str, charset))
+        if (!ft_sep(*str, sep))
             if (!start)
                 start = str;
-        if (ft_sep(*str, charset))
+        if (ft_sep(*str, sep))
         {
             if (start)
                 result[i++] = copy_substring(start, str);
