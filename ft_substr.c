@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:27:56 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/14 10:42:21 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/14 10:47:32 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*result;
 
 	i = 0;
-	*result = malloc(sizeof(size_t) * len);
+	result = malloc(sizeof(size_t) * len);
 	if (!result)
 		return (NULL);
 	while (i < len)
