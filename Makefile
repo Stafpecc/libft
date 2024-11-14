@@ -21,14 +21,14 @@ CFILES = ft_isdigit.c \
 	ft_atoi.c \
 	ft_strdup.c \
 	ft_calloc.c \
-	ft_split.c
+	ft_split.c \
+	ft_substr.c
 	
 
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
-EXEC = a.out
 INCLUDE = libft.h
 
 OBJS = $(CFILES:.c=.o)
