@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:21:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/13 15:14:30 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/14 10:27:38 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ char			*ft_strrchr(const char *str, int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 char			**ft_split(const char *str, char sep);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

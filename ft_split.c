@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 01:55:30 by stafpec           #+#    #+#             */
-/*   Updated: 2024/11/13 14:53:12 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/14 10:23:15 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,6 @@ char	*copy_substring(const char *start, const char *end)
 	return (substring);
 }
 
-int	ft_sep(char c, char sep)
-{
-	return (c == sep);
-}
-
 int	ft_count(const char *str, char sep)
 {
 	int	substring;
@@ -48,7 +43,7 @@ int	ft_count(const char *str, char sep)
 	counter = 0;
 	while (*str)
 	{
-		if (!ft_sep(*str, sep))
+		if (*str == sep)
 		{
 			if (!substring)
 			{
@@ -83,10 +78,10 @@ char	**ft_split(const char *str, char sep)
 		return (NULL);
 	while (*str)
 	{
-		if (!ft_sep(*str, sep))
+		if (!(*str == sep))
 			if (!start)
 				start = str;
-		if (ft_sep(*str, sep))
+		if ((*str == sep))
 		{
 			if (start)
 				result[i++] = copy_substring(start, str);

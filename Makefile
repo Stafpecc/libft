@@ -29,10 +29,11 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 EXEC = a.out
+INCLUDE = libft.h
 
 OBJS = $(CFILES:.c=.o)
 
-%.o: %.c
+%.o: %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
@@ -41,13 +42,10 @@ $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
 clean:
-	$(RM) $(OBJS) $(EXEC)
+	$(RM) $(OBJS)
 
-fclean:
+fclean: clean
 	$(RM) $(NAME)
-
-ffclean:
-	$(RM) $(NAME) $(OBJS) $(EXEC)
 
 re : fclean all
 
