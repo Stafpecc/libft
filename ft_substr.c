@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:27:56 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/14 10:47:32 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/14 11:00:07 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*result;
 
 	i = 0;
-	result = malloc(sizeof(size_t) * len);
+	if (start >= ft_strlen(s))
+		return (0);
+	result = malloc(sizeof(size_t) * (len + 1));
 	if (!result)
 		return (NULL);
 	while (i < len)
@@ -26,5 +28,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		result[i] = s[start + i];
 		i++;
 	}
+	result[i] = '\0';
 	return (result);
 }
