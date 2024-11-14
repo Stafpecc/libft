@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:33:28 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/14 12:45:07 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/14 12:52:40 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	result[i] = '\0';
-	return (s1);
+	return (result);
 }
