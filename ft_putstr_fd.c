@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:17:35 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/14 13:19:55 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/14 13:39:06 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		ft_putstr_fd(s[i], fd);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }
