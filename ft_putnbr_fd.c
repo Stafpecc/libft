@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 12:33:28 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/14 12:57:33 by tarini           ###   ########.fr       */
+/*   Created: 2024/11/14 13:27:10 by tarini            #+#    #+#             */
+/*   Updated: 2024/11/14 13:32:08 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t			i;
-	char			*result;
-	size_t			size;
-
-	i = 0;
-	size = ft_strlen(s1);
-	result = malloc(sizeof(char *) * (size + 1));
-	if (!result)
-		return (NULL);
-	while (s1[i] != '\0' && i < size - 1)
+	if (n < 0)
 	{
-		if (s1[i] != set)
-			result[i] = s1[i];
-		i++;
+		if (n == -2147483648)
+		{
+			ft_putchar_fd(45, fd);
+			ft_putnbr_fd(2147, fd);
+			ft_putnbr_fd(483648, fd);
+		}
+		else
+		{
+			ft_putchar_fd(45, fd);
+			n = -1 * n;
+			ft_putnbr_fd(n, fd);
+		}
 	}
-	result[i] = '\0';
-	return (result);
-}*/
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(48 + n % 10, fd);
+	}
+	else
+	{
+		ft_putchar_fd(48 + n, fd);
+	}
+}
