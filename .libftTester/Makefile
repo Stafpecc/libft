@@ -5,9 +5,9 @@ LIBFT_PATH		= $(PARENT_DIR)
 TESTS_PATH		= tests/
 MANDATORY		= memset bzero  memmove memchr atoi memcpy isalpha isdigit isalnum isprint isascii \
 				strdup strlen strlcat calloc strlcpy strchr memcmp strncmp tolower toupper strnstr \
-				strrchr split substr strjoin
+				strrchr split substr strjoin strtrim
 
-# strtrim itoa strmapi putchar_fd putstr_fd \
+# itoa strmapi putchar_fd putstr_fd \
 				putendl_fd putnbr_fd striter
 
 BONUS			= lstnew lstadd_front lstsize lstlast lstadd_back lstdelone lstclear lstiter lstmap

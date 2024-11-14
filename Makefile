@@ -23,7 +23,8 @@ CFILES = ft_isdigit.c \
 	ft_calloc.c \
 	ft_split.c \
 	ft_substr.c \
-	ft_strjoin.c
+	ft_strjoin.c \
+	ft_strtrim.c
 	
 
 NAME = libft.a

@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 01:55:30 by stafpec           #+#    #+#             */
-/*   Updated: 2024/11/14 12:31:46 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/14 12:44:25 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*copy_substring(const char *start, const char *end)
 
 int	ft_count(const char *str, char sep)
 {
-	int	substring;
+	int		substring;
 	size_t	counter;
 
 	substring = 0;
@@ -68,8 +68,8 @@ void	free_all(char **result, size_t i)
 char	**ft_split(const char *str, char sep)
 {
 	size_t			i;
-	char		**result;
-	const char	*start;
+	char			**result;
+	const char		*start;
 
 	start = NULL;
 	i = 0;
