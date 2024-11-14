@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 01:55:30 by stafpec           #+#    #+#             */
-/*   Updated: 2024/11/14 10:23:15 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/14 12:31:46 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,19 +37,16 @@ char	*copy_substring(const char *start, const char *end)
 int	ft_count(const char *str, char sep)
 {
 	int	substring;
-	int	counter;
+	size_t	counter;
 
 	substring = 0;
 	counter = 0;
 	while (*str)
 	{
-		if (*str == sep)
+		if (*str == sep && !substring)
 		{
-			if (!substring)
-			{
-				counter++;
-				substring = 1;
-			}
+			counter++;
+			substring = 1;
 		}
 		else
 			substring = 0;
@@ -58,38 +55,43 @@ int	ft_count(const char *str, char sep)
 	return (counter);
 }
 
-void	ft_split_end(const char *start, char **result, const char *str, int i)
+void	free_all(char **result, size_t i)
 {
-	if (start)
-		result[i++] = copy_substring(start, str);
-	result[i] = NULL;
+	while (i != 0)
+	{
+		free(result[i]);
+		i--;
+	}
+	free(result);
 }
 
 char	**ft_split(const char *str, char sep)
 {
-	int			i;
+	size_t			i;
 	char		**result;
 	const char	*start;
 
 	start = NULL;
 	i = 0;
-	result = (char **)malloc(sizeof(char *) * (ft_count(str, sep) + 1));
+	result = malloc(sizeof(char **) * (ft_count(str, sep) + 1));
 	if (!result)
 		return (NULL);
 	while (*str)
 	{
-		if (!(*str == sep))
-			if (!start)
-				start = str;
-		if ((*str == sep))
+		if (!(*str == sep) && !start)
+			start = str;
+		if ((*str == sep && start))
 		{
-			if (start)
-				result[i++] = copy_substring(start, str);
+			result[i++] = copy_substring(start, str);
+			if (!result[i - 1])
+				free_all(result, i);
 			start = NULL;
 		}
 		str++;
 	}
-	ft_split_end(start, result, str, i);
+	if (start)
+		result[i++] = copy_substring(start, str);
+	result[i] = NULL;
 	return (result);
 }
 
