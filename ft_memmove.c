@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:42:46 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/15 14:43:08 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/15 19:27:43 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-
 
 /*
 #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 18:41:41 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/15 18:18:26 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/15 19:34:17 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)str);
 	return (NULL);
 }
-
-
 
 /*
 #include <stdio.h>

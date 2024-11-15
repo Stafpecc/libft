@@ -3,41 +3,46 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 01:55:30 by stafpec           #+#    #+#             */
-/*   Updated: 2024/11/15 13:47:45 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/15 19:33:19 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char *copy_substring(const char *start, const char *end)
+char	*copy_substring(const char *start, const char *end)
 {
-    size_t len = end - start;
-    char *substring = (char *)malloc((len + 1) * sizeof(char));
-    if (!substring)
-        return NULL;
-    ft_memcpy(substring, start, len);
-    substring[len] = '\0';
-    return substring;
+	size_t	len;
+	char	*substring;
+
+	len = end - start;
+	substring = (char *)malloc((len + 1) * sizeof(char));
+	if (!substring)
+		return (NULL);
+	ft_memcpy(substring, start, len);
+	substring[len] = '\0';
+	return (substring);
 }
 
-void free_all(char **result, size_t i)
+void	free_all(char **result, size_t i)
 {
-    while (i > 0)
-    {
-        free(result[--i]);
-    }
-    free(result);
+	while (i > 0)
+	{
+		free(result[--i]);
+	}
+	free(result);
 }
 
 int	ft_count(const char *str, char sep)
 {
-	int count = 0;
-	int in_substring = 0;
+	int	count;
+	int	in_substring;
 
+	count = 0;
+	in_substring = 0;
 	while (*str)
 	{
 		if (*str == sep)
@@ -52,12 +57,13 @@ int	ft_count(const char *str, char sep)
 	return (count);
 }
 
-char		**ft_split(const char *str, char sep)
+char	**ft_split(const char *str, char sep)
 {
-	char	**result;
-	size_t	i = 0;
+	char		**result;
+	size_t		i;
 	const char	*start;
 
+	i = 0;
 	result = malloc(sizeof(char *) * (ft_count(str, sep) + 1));
 	if (!result)
 		return (NULL);
@@ -79,10 +85,6 @@ char		**ft_split(const char *str, char sep)
 	result[i] = NULL;
 	return (result);
 }
-
-
-
-
 
 /*
 #include <stdio.h>

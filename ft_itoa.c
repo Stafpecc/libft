@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 13:26:31 by stafpec           #+#    #+#             */
-/*   Updated: 2024/11/15 13:28:35 by stafpec          ###   ########.fr       */
+/*   Created: 2024/11/14 13:00:52 by tarini            #+#    #+#             */
+/*   Updated: 2024/11/15 19:46:36 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
 static size_t	ft_numlen(int n)
@@ -27,6 +28,21 @@ static size_t	ft_numlen(int n)
 	return (len);
 }
 
+void	sign(char *str, unsigned int *num, size_t *start, int n)
+{
+	if (n < 0)
+	{
+		str[0] = '-';
+		*num = -n;
+		*start = 1;
+	}
+	else
+	{
+		*num = n;
+		*start = 0;
+	}
+}
+
 char	*ft_itoa(int n)
 {
 	char			*str;
@@ -39,17 +55,7 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
-	if (n < 0)
-	{
-		str[0] = '-';
-		num = -n;
-		start = 1;
-	}
-	else
-	{
-		num = n;
-		start = 0;
-	}
+	sign(str, &num, &start, n);
 	while (len > start)
 	{
 		str[len - 1] = (num % 10) + '0';

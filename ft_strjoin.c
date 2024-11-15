@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 11:07:44 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/15 13:24:56 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/15 19:35:55 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[i + j] = '\0';
 	return (result);
 }
-
