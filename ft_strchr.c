@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 18:41:41 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/13 14:53:59 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/15 14:05:15 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 char	*ft_strchr(const char *str, int c)
 {
+	if (!str)
+		return (NULL);
+
 	while (*str != '\0')
 	{
 		if (*str == (char)c)
@@ -24,6 +27,8 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)str);
 	return (NULL);
 }
+
+
 
 /*
 #include <stdio.h>
