@@ -42,7 +42,8 @@ INCLUDE = libft.h
 
 OBJS = $(CFILES:.c=.o)
 
-%.o: %.c 
+
+%.o: %.c  
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
@@ -58,4 +59,4 @@ fclean: clean
 
 re : fclean all
 
-.PHONY: all clean fclean ffclean re
+.PHONY: all clean fclean re
