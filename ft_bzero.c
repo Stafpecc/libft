@@ -6,11 +6,10 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 12:22:27 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/13 15:16:45 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/17 13:46:28 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

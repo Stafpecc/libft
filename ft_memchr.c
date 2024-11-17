@@ -6,11 +6,10 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 15:36:02 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/13 15:24:26 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/17 13:46:33 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)

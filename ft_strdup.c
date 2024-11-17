@@ -6,13 +6,11 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:54:26 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/13 14:56:43 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/17 13:46:40 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
 
 char	*ft_strdup(const char *s)
 {

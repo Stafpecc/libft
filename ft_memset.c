@@ -6,11 +6,10 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:42:49 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/10 16:08:16 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/17 13:46:35 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)

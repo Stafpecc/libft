@@ -6,11 +6,10 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:45:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/13 15:20:30 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/17 13:46:34 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

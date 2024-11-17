@@ -6,12 +6,11 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:07:34 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/13 15:18:21 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/17 13:46:44 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 size_t	ft_strlen(const char *s)
 {

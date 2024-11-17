@@ -6,12 +6,11 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:00:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/15 19:46:36 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/17 13:46:32 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	ft_numlen(int n)
 {
