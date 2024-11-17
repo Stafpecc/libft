@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:56:43 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/17 15:40:20 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/17 15:04:49 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 {
 	struct s_list *current;
 
-	if (!*lst)
+	if (*lst == NULL)
 	{
 		*lst = new;
 		return ;
