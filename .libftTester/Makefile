@@ -8,7 +8,10 @@ MANDATORY		= memset bzero  memmove memchr atoi memcpy isalpha isdigit isalnum is
 				strrchr split substr strjoin strtrim itoa putchar_fd putstr_fd putendl_fd putnbr_fd \
 				strmapi striteri 
 
-BONUS			= lstnew lstadd_front lstsize lstlast lstadd_back lstdelone lstclear lstiter lstmap
+BONUS			= lstnew lstadd_front lstsize lstlast lstadd_back lstdelone lstclear lstiter 
+
+# lstmap
+
 VSOPEN			= $(addprefix vs, $(MANDATORY)) $(addprefix vs, $(BONUS))
 
 CC		= clang++
@@ -21,8 +24,8 @@ endif
 $(MANDATORY): %: mandatory_start
 	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
 
-#$(BONUS): %: bonus_start
-#	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
+$(BONUS): %: bonus_start
+	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
 
 $(VSOPEN): vs%:
 	@code $(TESTS_PATH)ft_$*_test.cpp
@@ -32,10 +35,10 @@ mandatory_start: update message
 	make -C $(LIBFT_PATH)
 	@tput setaf 4 && echo [Mandatory]
 
-# bonus_start: update message
-#	@tput setaf 6
-#	make bonus -C $(LIBFT_PATH)
-#	@tput setaf 5 && echo [Bonus]
+bonus_start: update message
+	@tput setaf 6
+	make bonus -C $(LIBFT_PATH)
+	@tput setaf 5 && echo [Bonus]
 
 update:
 	@git pull

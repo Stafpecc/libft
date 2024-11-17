@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:14:26 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/17 14:36:40 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/17 17:09:53 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_lstsize(t_list *lst)
 	while (lst != NULL)
 	{
 		lst = lst->next;
-		currentPosition;
+		currentPosition++;
 	}
 	return (currentPosition);
 }
