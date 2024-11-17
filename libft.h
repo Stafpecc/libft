@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:21:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/14 23:33:36 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/15 19:55:44 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,11 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 #endif
