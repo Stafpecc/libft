@@ -40,14 +40,13 @@ BCFILES = ft_lstnew_bonus.c \
 	ft_lstadd_back_bonus.c \
 	ft_lstdelone_bonus.c \
 	ft_lstclear_bonus.c \
-	ft_lstiter_bonus.c
-#	ft_lstmap_bonus.c
+	ft_lstiter_bonus.c \
+	ft_lstmap_bonus.c
 
 NAME = libft.a
 INCLUDE = libft.h
 
 RM = rm -f
-
 CC = cc
 AR = ar
 
@@ -60,16 +59,16 @@ BOBJS = $(BCFILES:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $@ $<
-
-bonus: $(BOBJS) $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
 
-%.o: %.c  
+bonus: $(NAME) $(BOBJS)
+	$(AR) $(ARFLAGS) $^
+
+%.o: %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BOBJS)
 
 fclean: clean
 	$(RM) $(NAME)

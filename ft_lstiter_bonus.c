@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 16:42:28 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/17 17:32:29 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/18 20:25:59 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	struct s_list	*current;
-
-	if (!lst)
-		return ;
-	if (!(lst)->next)
+	while (lst)
 	{
-		(*f)((lst)->content);
-		free(lst);
-		lst = NULL;
-		return ;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
-	current = lst;
-	while (current->next != NULL)
-	{
-		(*f)(current->content);
-		current = current->next;
-	}
-	(*f)((lst)->content);
 }

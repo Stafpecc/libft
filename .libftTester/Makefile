@@ -8,9 +8,7 @@ MANDATORY		= memset bzero  memmove memchr atoi memcpy isalpha isdigit isalnum is
 				strrchr split substr strjoin strtrim itoa putchar_fd putstr_fd putendl_fd putnbr_fd \
 				strmapi striteri 
 
-BONUS			= lstnew lstadd_front lstsize lstlast lstadd_back lstdelone lstclear lstiter 
-
-# lstmap
+BONUS			= lstnew lstadd_front lstsize lstlast lstadd_back lstdelone lstclear lstiter lstmap
 
 VSOPEN			= $(addprefix vs, $(MANDATORY)) $(addprefix vs, $(BONUS))
 
