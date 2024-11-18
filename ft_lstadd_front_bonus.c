@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 13:48:43 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/17 17:29:52 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/18 11:35:12 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*new_node;
-
-	new_node = ft_lstnew(new);
-	new_node->next = *lst;
-	*lst = new_node;
+	new->next = *lst;
+	*lst = new;
 }
