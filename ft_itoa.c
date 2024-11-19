@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:00:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/19 17:43:46 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/19 17:53:41 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,12 @@ char	*ft_itoa(int n)
 /*
 #include <stdio.h>
 
-int	main(void) {
-	printf("%s", ft_itoa(3560));
+int	main(int ac, char **av) {
+	int	test;
+
+	(void)ac;
+	test = ft_atoi(av[1]);
+	printf("%s", ft_itoa(test));
+	return (0);
 }
 */
