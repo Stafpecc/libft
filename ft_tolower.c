@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 23:32:19 by stafpec           #+#    #+#             */
-/*   Updated: 2024/11/17 13:46:48 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/19 18:12:41 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,11 @@ int	ft_tolower(int c)
 		return (c + ('a' - 'A'));
 	return (c);
 }
+/*
+#include <stdio.h>
+
+int	main(void) {
+	printf("%d", ft_tolower('A'));
+	return (1);
+}
+*/
