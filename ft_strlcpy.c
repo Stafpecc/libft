@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:47:49 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/17 13:46:42 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/19 15:50:59 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	s;
+	size_t	i;
+	size_t	s;
 
 	i = 0;
 	s = 0;

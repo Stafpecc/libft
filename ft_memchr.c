@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 15:36:02 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/17 13:46:33 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/19 16:09:40 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
 /*
 #include <stdio.h>
 #include <string.h>
