@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 23:31:33 by stafpec           #+#    #+#             */
-/*   Updated: 2024/11/19 15:21:37 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/19 17:22:07 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strrchr(const char *str, int c)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == (char)c)
+		if (str[i] == (unsigned char)c)
 			last = &str[i];
 		i++;
 	}
-	if (c == '\0')
+	if (!(unsigned char)c)
 		return ((char *)(&str[i]));
 	return ((char *)last);
 }
