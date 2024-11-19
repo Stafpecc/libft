@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:50:53 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/18 11:41:19 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/19 14:54:07 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst)
-	while (lst->next != NULL)
 	{
-		lst = lst->next;
+		while (lst->next != NULL)
+			lst = lst->next;
 	}
 	return (lst);
 }

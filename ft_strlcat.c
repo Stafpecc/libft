@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:55:16 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/17 13:46:41 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/19 14:52:21 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
-	unsigned int	dstlen;
-	unsigned int	srclen;
-	unsigned int	i;
+	size_t	dstlen;
+	size_t	srclen;
+	size_t	i;
 
 	dstlen = ft_strlen(dest);
 	srclen = ft_strlen(src);

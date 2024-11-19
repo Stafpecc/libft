@@ -45,6 +45,7 @@ BCFILES = ft_lstnew_bonus.c \
 
 NAME = libft.a
 INCLUDE = libft.h
+MAKEFILE = Makefile
 
 RM = rm -f
 CC = cc
@@ -64,7 +65,7 @@ $(NAME): $(OBJS)
 bonus: $(NAME) $(BOBJS)
 	$(AR) $(ARFLAGS) $^
 
-%.o: %.c $(INCLUDE)
+%.o: %.c $(INCLUDE) $(MAKEFILE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

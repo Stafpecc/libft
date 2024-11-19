@@ -6,7 +6,7 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:00:52 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/17 13:46:32 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/19 15:06:48 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,9 @@ char	*ft_itoa(int n)
 	size_t			start;
 
 	len = ft_numlen(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = ft_calloc((len + 1), sizeof(char));
 	if (!str)
 		return (NULL);
-	str[len] = '\0';
 	sign(str, &num, &start, n);
 	while (len > start)
 	{
