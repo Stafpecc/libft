@@ -6,12 +6,11 @@
 /*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:54:30 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/19 14:50:10 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/21 16:37:53 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 int	ft_pass(int i, const char *str, int *s)
 {
@@ -29,9 +28,9 @@ int	ft_pass(int i, const char *str, int *s)
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	result;
+	int				i;
+	int				sign;
+	long long int	result;
 
 	i = 0;
 	sign = 1;
@@ -39,12 +38,12 @@ int	ft_atoi(const char *nptr)
 	i = ft_pass(i, nptr, &sign);
 	while (ft_isdigit(nptr[i]))
 	{
-		if (result > (LLONG_MAX - (nptr[i] - '0')) / 10)
-			return (-1 * (1 - sign) / 2);
+		if ((result * 10 + (nptr[i] - '0')) / 10 != result)
+			return (-1 * (sign > 0));
 		result = result * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return (result * sign);
+	return ((int)result * sign);
 }
 
 /*

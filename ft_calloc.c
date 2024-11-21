@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:18:07 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/21 11:17:54 by stafpec          ###   ########.fr       */
+/*   Updated: 2024/11/21 16:27:24 by tarini           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 	size_t	product;
 
 	if (elementCount == 0 || elementSize == 0)
-		return (NULL);
+		return (malloc(0));
 	if (elementCount > SIZE_MAX / elementSize)
 		return (NULL);
 	product = elementCount * elementSize;
