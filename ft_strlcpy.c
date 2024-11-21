@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:47:49 by tarini            #+#    #+#             */
-/*   Updated: 2024/11/19 15:50:59 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/21 11:25:50 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	i = 0;
 	s = 0;
 	while (src[s] != '\0')
-	{
 		s++;
-	}
 	if (size == 0)
 		return (s);
 	while (src[i] != '\0' && i < size - 1)

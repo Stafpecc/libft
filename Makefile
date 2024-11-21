@@ -49,9 +49,8 @@ MAKEFILE = Makefile
 
 RM = rm -f
 CC = cc
-AR = ar
+AR = ar -rcs
 
-ARFLAGS = -rcs
 CFLAGS = -Wall -Wextra -Werror
 
 OBJS = $(CFILES:.c=.o)
@@ -60,10 +59,10 @@ BOBJS = $(BCFILES:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(AR) $@ $^
 
 bonus: $(NAME) $(BOBJS)
-	$(AR) $(ARFLAGS) $^
+	$(AR) $^
 
 %.o: %.c $(INCLUDE) $(MAKEFILE)
 	$(CC) $(CFLAGS) -c $< -o $@

@@ -3,37 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tarini <tarini@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stafpec <stafpec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 01:55:30 by stafpec           #+#    #+#             */
-/*   Updated: 2024/11/17 13:46:38 by tarini           ###   ########.fr       */
+/*   Updated: 2024/11/21 11:59:44 by stafpec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*copy_substring(const char *start, const char *end)
-{
-	size_t	len;
-	char	*substring;
-
-	len = end - start;
-	substring = (char *)malloc((len + 1) * sizeof(char));
-	if (!substring)
-		return (NULL);
-	ft_memcpy(substring, start, len);
-	substring[len] = '\0';
-	return (substring);
-}
-
-void	free_all(char **result, size_t i)
-{
-	while (i > 0)
-	{
-		free(result[--i]);
-	}
-	free(result);
-}
 
 int	ft_count(const char *str, char sep)
 {
@@ -56,31 +33,50 @@ int	ft_count(const char *str, char sep)
 	return (count);
 }
 
+static void	free_split(char **result, size_t count)
+{
+	while (count > 0)
+		free(result[--count]);
+	free(result);
+}
+
+static const char	*find_next_segment(const char *str, char sep, int *length)
+{
+	while (*str && *str == sep)
+		str++;
+	*length = 0;
+	while (str[*length] && str[*length] != sep)
+		(*length)++;
+	if (*length > 0)
+		return (str);
+	return (NULL);
+}
+
 char	**ft_split(const char *str, char sep)
 {
-	char		**result;
-	size_t		i;
-	const char	*start;
+	char	**result;
+	int		segment_length;
+	size_t	i;
 
-	i = 0;
+	if (!str)
+		return (NULL);
 	result = malloc(sizeof(char *) * (ft_count(str, sep) + 1));
 	if (!result)
 		return (NULL);
-	start = NULL;
-	while (*str)
+	i = 0;
+	str = find_next_segment(str, sep, &segment_length);
+	while (str)
 	{
-		if (*str != sep && !start)
-			start = str;
-		else if (*str == sep && start)
+		result[i] = ft_substr(str, 0, segment_length);
+		if (!result[i])
 		{
-			result[i] = ft_substr(start, 0, str - start);
-			start = NULL;
-			i++;
+			free_split(result, i);
+			return (NULL);
 		}
-		str++;
+		str += segment_length;
+		i++;
+		str = find_next_segment(str, sep, &segment_length);
 	}
-	if (start)
-		result[i++] = ft_substr(start, 0, str - start);
 	result[i] = NULL;
 	return (result);
 }
