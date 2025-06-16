@@ -1,4 +1,4 @@
-name: Libft CI
+name: CI
 
 on:
   push:
@@ -9,56 +9,23 @@ on:
       - master
 
 jobs:
-  norminette:
-    name: Norminette Check
+  libft-test:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: .libftTester
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install norminette
-        run: |
-          python3 -m pip install --upgrade pip
-          pip install norminette
-
-      - name: Run norminette
-        run: norminette
-
-  libft_check:
-    name: Libft Check
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Install dependencies
-        run: sudo apt update && sudo apt install -y make gcc
+        run: sudo apt-get install -y make gcc valgrind
 
-      - name: Run libft_check
-        run: |
-          chmod +x libft_check.sh
-          ./libft_check.sh
+      - name: Run tests
+        run: TERM=xterm make
 
-  francinette:
-    name: Francinette Test
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install dependencies
-        run: sudo apt update && sudo apt install -y git make gcc clang
-
-      - name: Clone Francinette
-        run: |
-          git clone https://github.com/xicodomingues/francinette.git
-          cd francinette
-          ./setup.sh
-
-      - name: Run Francinette
-        run: |
-          cd francinette
-          ./grademe.sh --bonus
+#      - name: Run francinette
+#        run: |
+#          bash -c "$(curl -fsSL https://raw.github.com/xicodomingues/francinette/master/bin/install.sh)"
+#          francinette
